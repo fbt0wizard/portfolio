@@ -4,7 +4,7 @@ html {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: #000e14;
   overflow-x: hidden;
 }
@@ -44,6 +44,19 @@ html {
   z-index: 2;
 }
 
+.navbar .nav-wrapper .brand .logo {
+  font-family: "Lobster", cursive;
+  text-decoration: none;
+  font-size: 30px;
+  color: #008bc4;
+}
+
+@media (max-width: 642px) {
+  .navbar .nav-wrapper .brand .logo {
+    font-size: 21px;
+  }
+}
+
 .navbar .nav-wrapper .brand .menu {
   display: none;
 }
@@ -71,8 +84,8 @@ html {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media (max-width: 642px) {
@@ -134,8 +147,8 @@ html {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .mobile .nav-link {
@@ -216,13 +229,73 @@ html {
   margin-bottom: 1rem;
 }
 
-.my-details .name a {
+.draw-border {
+  -webkit-box-shadow: inset 0 0 0 4px #008bc4;
+          box-shadow: inset 0 0 0 4px #008bc4;
+  color: #008bc4;
+  -webkit-transition: color 0.25s 0.08333s;
+  transition: color 0.25s 0.08333s;
+  position: relative;
+}
+
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+
+.draw-border:hover {
+  color: #ffcd2b;
+}
+
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #ffcd2b;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.draw-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
   text-decoration: none;
-  color: #fff;
-  border: 2px solid #008bc4;
-  padding: 10px 17px;
-  font-size: 15px;
-  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 600 1rem "Roboto Slab", sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+
+.btn:focus {
+  outline: 2px dotted #55d7dc;
 }
 
 .parent {
@@ -425,13 +498,66 @@ html {
 }
 
 .footer .update form button {
-  color: #fff;
-  border: 2px solid #008bc4;
+  border: none;
   background-color: #000e14;
   padding: 10px 17px;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.sub-border {
+  -webkit-box-shadow: inset 0 0 0 3px #008bc4;
+          box-shadow: inset 0 0 0 3px #008bc4;
+  color: #008bc4;
+  -webkit-transition: color 0.25s 0.08333s;
+  transition: color 0.25s 0.08333s;
+  position: relative;
+}
+
+.sub-border::before, .sub-border::after {
+  border: 0 solid transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.sub-border::before {
+  border-bottom-width: 3px;
+  border-left-width: 3px;
+}
+
+.sub-border::after {
+  border-top-width: 3px;
+  border-right-width: 3px;
+}
+
+.sub-border:hover {
+  color: #ffe593;
+}
+
+.sub-border:hover::before, .sub-border:hover::after {
+  border-color: #ffe593;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.sub-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+
+.sub-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
 }
 
 .php img {
@@ -596,8 +722,6 @@ html {
 
 .my-projects .template .details .redirect a {
   text-decoration: none;
-  color: #fff;
-  border: 2px solid #008bc4;
   padding: 6px 13px;
   font-size: 17px;
   font-weight: 600;
@@ -654,5 +778,279 @@ html {
   .my-projects .template .details .technologies h4 {
     margin: 6px 0;
   }
+}
+
+.links {
+  -webkit-box-shadow: inset 0 0 0 3px #008bc4;
+          box-shadow: inset 0 0 0 3px #008bc4;
+  color: #008bc4;
+  -webkit-transition: color 0.25s 0.08333s;
+  transition: color 0.25s 0.08333s;
+  position: relative;
+}
+
+.links::before, .links::after {
+  border: 0 solid transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.links::before {
+  border-bottom-width: 3px;
+  border-left-width: 3px;
+}
+
+.links::after {
+  border-top-width: 3px;
+  border-right-width: 3px;
+}
+
+.links:hover {
+  color: #ffe593;
+}
+
+.links:hover::before, .links:hover::after {
+  border-color: #ffe593;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.links:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+
+.links:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+}
+
+.source {
+  -webkit-box-shadow: inset 0 0 0 3px #008bc4;
+          box-shadow: inset 0 0 0 3px #008bc4;
+  color: #008bc4;
+  -webkit-transition: color 0.25s 0.08333s;
+  transition: color 0.25s 0.08333s;
+  position: relative;
+}
+
+.source::before, .source::after {
+  border: 0 solid transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.source::before {
+  border-bottom-width: 3px;
+  border-left-width: 3px;
+}
+
+.source::after {
+  border-top-width: 3px;
+  border-right-width: 3px;
+}
+
+.source:hover {
+  color: #ffe593;
+}
+
+.source:hover::before, .source:hover::after {
+  border-color: #ffe593;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.source:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+
+.source:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+}
+
+.contact {
+  padding: 10px;
+  width: 60%;
+  margin: 3rem auto;
+  text-align: center;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #000f15, #000d12);
+  -webkit-box-shadow: 13px 13px 16px #000609, -13px -13px 16px #00161f;
+          box-shadow: 13px 13px 16px #000609, -13px -13px 16px #00161f;
+}
+
+@media (max-width: 642px) {
+  .contact {
+    width: 80%;
+  }
+}
+
+.contact .topic h2 {
+  color: #fff;
+  margin: 2rem 0;
+}
+
+.contact .contact-form {
+  width: 95%;
+  margin: auto;
+}
+
+.contact .contact-form form .input {
+  display: -ms-grid;
+  display: grid;
+}
+
+.contact .contact-form form .input input {
+  margin: 10px 0;
+  height: 33px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid #008bc4;
+  background: #001c27;
+  padding: 0 7px;
+}
+
+.contact .contact-form form .input input:focus {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #008bc4;
+  outline: none;
+}
+
+.contact .contact-form form .input textarea {
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid #008bc4;
+  background: #001c27;
+  padding: 0 7px;
+}
+
+.contact .contact-form form .input textarea:focus {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #008bc4;
+  outline: none;
+}
+
+.contact .contact-form form .button button {
+  border: none;
+  background-color: #000e14;
+  padding: 10px 17px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.contact .contact-form hr {
+  margin: 2rem 0;
+  border: 1px solid #008bc4;
+}
+
+.contact .contact-form .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+  background-color: #001c27;
+  padding: 16px 3px;
+  border-radius: 5px;
+}
+
+.contact .contact-form .email p {
+  color: #fff;
+  margin-right: 5px;
+  font-size: 0;
+}
+
+.contact .contact-form .email a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+}
+
+.contact-border {
+  -webkit-box-shadow: inset 0 0 0 3px #008bc4;
+          box-shadow: inset 0 0 0 3px #008bc4;
+  color: #008bc4;
+  -webkit-transition: color 0.25s 0.08333s;
+  transition: color 0.25s 0.08333s;
+  position: relative;
+}
+
+.contact-border::before, .contact-border::after {
+  border: 0 solid transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.contact-border::before {
+  border-bottom-width: 3px;
+  border-left-width: 3px;
+}
+
+.contact-border::after {
+  border-top-width: 3px;
+  border-right-width: 3px;
+}
+
+.contact-border:hover {
+  color: #ffe593;
+}
+
+.contact-border:hover::before, .contact-border:hover::after {
+  border-color: #ffe593;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+
+.contact-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+}
+
+.clicked {
+  color: #fff !important;
 }
 /*# sourceMappingURL=main.css.map */

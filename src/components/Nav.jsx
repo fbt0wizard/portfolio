@@ -1,33 +1,35 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Nav = () => {
     const [ nav, setNav ] = useState(false);
     const handleNav = () => {
         setNav(!nav)
     }
-    console.log(document.title)
+    const hideNav = () => {
+        setNav(false)
+    }
     return (
         <div className='navbar'>
             <div className="nav-wrapper">
                 <div className="brand">
-                    <p className="logo">FBT</p>
+                    <Link className='logo' to="/">Oladipo.js</Link>
                     <p className="menu" onClick={handleNav}>menu</p>
                 </div>
                 <div className="navigation">
                     <ul>
                         <div className={nav ? "mobile" : "navlinks"}>
                             <li className='nav-link'>
-                                <Link to="/">Home</Link>
+                                <NavLink className={({isActive}) => (isActive ? "clicked" : 'none')} onClick={hideNav} to="/">Home</NavLink>
                             </li>
                             <li className='nav-link'>
-                                <Link to="/about-me">About</Link>
+                                <NavLink className={({isActive}) => (isActive ? "clicked" : 'none')} onClick={hideNav} to="/about-me">About</NavLink>
                             </li>
                             <li className='nav-link'>
-                                <Link to="/my-projects">Projects</Link>
+                                <NavLink className={({isActive}) => (isActive ? "clicked" : 'none')} onClick={hideNav} to="/my-projects">Projects</NavLink>
                             </li>
                             <li className='nav-link'>
-                                <Link to="/">Hire Me</Link>
+                                <NavLink className={({isActive}) => (isActive ? "clicked" : 'none')} onClick={hideNav} to="/contact">Hire Me</NavLink>
                             </li>
                         </div>
                     </ul>

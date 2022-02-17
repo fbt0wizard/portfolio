@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import projectData from './projectData';
 import { useSpring, animated } from 'react-spring';
 import MyProject from './MyProject';
+import LightSpeed from 'react-reveal/LightSpeed';
 
 
 const Project = () => {
@@ -21,7 +22,9 @@ const Project = () => {
       <h1>My Projects</h1>
     </animated.div>
     {projectData.map((item, i) => (
+      <LightSpeed left>
       <MyProject image={item.image} link={item.link} code={item.code} write_up={item.write_up} delay={item.delay} technologies={item.technologies} key={i}/>
+      </LightSpeed>
     ))}
   </div>
 }

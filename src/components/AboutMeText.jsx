@@ -13,23 +13,18 @@ const AboutMeText = () => {
         <div className="text">
             <animated.div style={heading}>
                 <p>
-                    Hello, My name is Saurav Purohit and I'm from India currently in my 3rd year
-                    of college pursuing my undergrad in Bachelor of Technology. I love to solve
-                    problems whether it's finding the most elegant way to write lines of code or
-                    figuring out which code fits best into progression.I am committed to learning
-                    and self-development to achieve better results. I am always open to learning
-                    and constructive feedback. <br /> <br />
+                    Hello my name is Oladipo a React Js developoer with knoeledge of Node Js, PHP 
+                    and other programming languages/frameworks, i am result oriented and possess a very strong 
+                    problem solving skill. <br /> <br />
 
-                    Apart from college, I'm into Front End Web Development. I create interactive
-                    and responsive websites and web apps on a daily basis in order me grow and
-                    learn a ton of new stuff as a developer. My current tech stack in HTML, CSS,
-                    JavaScript and React. Also I enjoy writing technical blogs on hashnode. I also
-                    actively surf the web for new resources out there that definitely helps a lot
-                    while working on a project. <br /> <br />
+                    I have work with various startups to build a web application from scratch, i have proven 
+                    ability to work on my own with minimal or no supervision and to always deliver result within a 
+                    given timeframe. <br /> <br />
 
-                    Other than that I'm interested in Open Source, Artificial Intelligence, Machine
-                    Learning and Web 3.0. My hobbies are playing/watching football, reading blogs
-                    and self help books, watching OTT contents.
+                    I am open to opportunuties all over the world that would help advanced my carrear and also willing to learn more 
+                    frameworks and programming languages if required, i learn very fast and also commited to improving my stills in 
+                    all ramification, if you have any job you would like me to be on, please don't hesitate to reach out to me 
+                    thanks.
                 </p>
             </animated.div>
         </div>

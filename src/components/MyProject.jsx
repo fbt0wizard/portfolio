@@ -25,8 +25,8 @@ function MyProject({ image, link, code, write_up, delay, technologies }) {
             </div>
             <div className="details">
                 <div className="redirect">
-                    <a target="_blank" href={link} rel="noopener noreferrer">preview</a>
-                    <a target="_blank" href={code} rel="noopener noreferrer">&#60;code&#47;&#62;</a>
+                    <a className='links' target="_blank" href={link} rel="noopener noreferrer">preview</a>
+                    <a className='source' target="_blank" href={code} rel="noopener noreferrer">&#60;code&#47;&#62;</a>
                 </div>
                 <p>{write_up}</p>
                 <hr />
