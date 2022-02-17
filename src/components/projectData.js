@@ -77,7 +77,7 @@ const projectData = [{
 {
     id: 5,
     delay: 1800,
-    link: "https://oladipo_portfolio.netlify.app/",
+    link: "https://oladipo-dev.netlify.app/",
     code: "https://github.com/fbt0wizard/portfolio",
     image: portfolio,
     write_up: "This project is my portfolio designed with React and various libraries such as react spring and many more, " +
