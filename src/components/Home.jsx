@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import HomeImage from "./HomeImage";
 import HomeText from "./HomeText";
 import Skill from "./Skill";

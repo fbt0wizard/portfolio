@@ -9,7 +9,7 @@ const Footer = () => {
               <button type='submit' className='sub-border'>Subscribe</button>
           </form>
       </div>
-      <p>copyright &#169; 2022</p>
+      <p>copyright oladipo.dev &#169; 2022</p>
   </div>
 }
 

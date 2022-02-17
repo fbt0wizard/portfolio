@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSpring, animated, useTransition } from 'react-spring';
+import { animated, useTransition } from 'react-spring';
 
 const HomeImage = ({ pics }) => {
     const show = true;

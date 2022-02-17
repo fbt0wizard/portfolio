@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import projectData from './projectData';
 import { useSpring, animated } from 'react-spring';
 import MyProject from './MyProject';

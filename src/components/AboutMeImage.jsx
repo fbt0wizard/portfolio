@@ -1,6 +1,6 @@
 import React from 'react';
 import profile from "../skills/fullimage.jpg";
-import { useSpring, animated, useTransition } from 'react-spring';
+import { animated, useTransition } from 'react-spring';
 
 const AboutMeImage = () => {
     const show = true;

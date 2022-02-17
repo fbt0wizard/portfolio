@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import AboutMeImage from './AboutMeImage';
 import AboutMeText from './AboutMeText';
 import { animated, useSpring } from "react-spring";
