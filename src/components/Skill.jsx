@@ -11,6 +11,7 @@ import mongo from "../skills/mongo.webp";
 import node from "../skills/node.webp";
 import boostrap from "../skills/boostrap.webp";
 import react from "../skills/react.webp";
+import redux from "../skills/redux.png";
 import php from "../skills/php.png";
 import sass from "../skills/sass.png";
 import seo from "../skills/seo.png";
@@ -58,6 +59,11 @@ const Skill = () => {
         <LightSpeed left>
           <div className="react">
             <img src={react} alt="" />
+          </div>
+        </LightSpeed>
+        <LightSpeed left>
+          <div className="redux">
+            <img src={redux} alt="" />
           </div>
         </LightSpeed>
         <LightSpeed right>
