@@ -22,7 +22,7 @@ const AboutMeText = () => {
                     given timeframe. <br /> <br />
 
                     I am open to opportunuties all over the world that would help advanced my carrear and also willing to learn more 
-                    frameworks and programming languages if required, i learn very fast and also commited to improving my stills in 
+                    frameworks and programming languages if required, i learn very fast and also commited to improving my skills in 
                     all ramification, if you have any job you would like me to be on, please don't hesitate to reach out to me 
                     thanks.
                 </p>
